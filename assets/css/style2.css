@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+     color: brown;
+
+}
+
+p {
+    color: brown;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: brown;
+    border: 2px solid brown;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 10px 200px;
+
+}
+    
+.p-1 {
+    display: block;
+    padding: 20px;
+    margin: 0px;
+
+}
+
+.p-2 {
+  display:inline-block;
+  margin: 0px;
+  padding: 20px;
+  width: 33%;
+}
