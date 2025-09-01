@@ -8,15 +8,6 @@ h1 {
     display: block;
 }
 
-p {
-    width: 200px;
-    height: 300px;
-    background-color:bisque;
-    border: 2px green solid;
-    padding: 20px 10px;
-    margin: 30px;
-}
-
 a {
     display: inline-block;
     width: 100px;
@@ -27,4 +18,34 @@ a {
     vertical-align: top;
     text-decoration: none;
     color: rgb(200,100,10);
+}
+
+
+div {
+    color: rgb(100,200,0);
+    font-size: 0px;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+    box-sizing: border-box; 
+    color: inherit;
+    border: 2px red dashed; 
+    padding: 10px;
+    margin: 20px 0px 20px;
+    height: 100px;
+    width: calc(100% / 2);
+    vertical-align: top;
+    font-size: 15px;
+}
+
+img {
+    border: 3px blue solid;
+    height: 400px;
+    width: 400px;  
+    object-fit: cover;
+    /* object-position: top right; */
+    border-radius: 50%;
+    
 }
