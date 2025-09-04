@@ -60,3 +60,16 @@ img {
     border-radius: 50%;
     
 }
+
+selection {
+    color: blue;
+    display: inline-block;
+    text-align: center;
+    margin: 500px 0px 100px;
+    width: 100%;
+    font-size: 0px;
+}
+
+.p1 {
+    width: calc(100% / 3);
+}

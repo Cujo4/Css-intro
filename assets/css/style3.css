@@ -42,7 +42,7 @@ h2 {
     margin: 5px 3px;
 }
 
-a {
+a{
     display: inherit;
     font-size: 22px;
     margin: 10px 0px 300px;
@@ -51,6 +51,12 @@ a {
     border: 2px rgb(146, 98, 57) solid;
     border-radius:10px;
     padding: 10px;
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+    border-color: blue;
 }
 
 main {
