@@ -20,6 +20,10 @@ a {
     text-decoration: none;
     color: rgb(200,100,10);
     font-size: 15px;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 * {
@@ -29,6 +33,13 @@ a {
 body {
     margin: 0px;
     font-size: 0px;
+    
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 }
 
 div {
