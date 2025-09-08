@@ -1,98 +1,81 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-size: 0px;
-    
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
 }
 
 body {
-    display: inline-block;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     color: rgb(146, 98, 57);
-    width: 100%;
-    height: 100%;
-    background-image: url(./../css/images/vkusnye-keksy-s-cernikoi.jpg);
-    background-size: cover;
-    background-position: right 50% bottom 100%;
-    background-repeat: no-repeat;
     background-color: white;
-    font-style: normal;
-    
+    text-align: center;
 }
 
 header {
-    display: inherit;
-    width: 100%;
-    height: 100%;
-    font-weight: 300;
-    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0px;
+    background-image: url(./images/beachshowcase.jpg);
+    background-size: cover;
+    background-position: left 50% top 80%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-weight: 600;
 }
 
-h1 {
-    display: block;
-    font-size: 60px;
-    margin: 250px 0px 0px;
+main {
+    font-size: 0px;
 }
 
-h2 {
-    display: inherit;
+.head_1 {
+    padding: 200px;
+    font-size: 30px;
+
+}
+
+.head_1_h2 {
+    display: inline-block;
     font-size: 20px;
-    margin: 5px 3px;
 }
 
-a{
-    display: inherit;
-    font-size: 22px;
-    margin: 10px 0px 300px;
-    text-decoration: none;
+a {
     color: inherit;
-    border: 2px rgb(146, 98, 57) solid;
-    border-radius:10px;
+    text-decoration: none;
+}
+
+.a_read_more {
+    display: inline-block;
+    border: 2px yellow solid;
     padding: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    
 }
 
 a:hover {
     color: white;
     background-color: black;
-    border-color: blue;
-}
-
-main {
-    display: inherit;
-    color: inherit;
-    font-size: 0px;
-    height: 400px;
-    font-weight: 700;
+    border-color: grey;
 }
 
 p {
-    text-align: left;
-    display: inherit;
-    font-size: 16px;
-    margin: 0px;
-    padding: 30px;
-    color: inherit;
-    background-color: rgb(249, 249, 249);
-    font-weight: 200;
+  padding: 10px;
+  margin: 0px; 
+  font-size: 15px;
+  text-align: left;
 }
 
 div {
-    display: inherit;
     font-size: 0px;
-  }
+}
 
-  .p-brown {
-    display: inherit;
-    background-color: rgb(146, 98, 57); 
+.p-brown {
+    background-color: rgb(146, 98, 57);
     color: white;
 }
 
 .p-width {
-    display: inherit;
-    width: 33%;
-    margin: 0px;   
+    display: inline-block;
+    width: 33.33%;
+    padding: 20px;
 }
-
 
