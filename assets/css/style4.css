@@ -1,3 +1,44 @@
-* {
-    
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 16px;
+}
+
+p {
+    text-align: center;
+    font-size: 1em; /* (16px) */
+    font-family: ;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Roboto Slab, serif;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em; /* (32px) */
+    font-family: ;
+
+}
+
+/* Единицы измерения:
+1) Абсолютные - px;
+2) Относительные - em (1em = 100% от шрифта род. эл.)
+                rem (1rem = 100% от шрифта root "корневого" эл.)
+                vw (1vw = 1% видимой ширины окна браузера) 
+                vh (1vh = 1% видимой высоты окна браузера)
+                */
+
+div {
+    font-size: 1.5em; /* (24px) */
+    font-weight: 600;
+    font-style: italic; 
+}
+
+article {
+    font-size: 2.25rem; /* (36px) */
+    font-style: initial;
+    font-family: Story Script, sans-serif;
 }
