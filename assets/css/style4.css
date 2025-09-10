@@ -4,12 +4,16 @@ html {
 
 body {
     font-size: 16px;
+    line-height: 1;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    text-indent: 20px; /* Отступ абзаца */
 }
 
 p {
-    text-align: center;
+    text-align: left;
     font-size: 1em; /* (16px) */
-    font-family: ;
+
     font-weight: 400;
     font-style: normal;
     font-family: Roboto Slab, serif;
@@ -19,7 +23,7 @@ p {
 h1 {
     text-align: center;
     font-size: 2em; /* (32px) */
-    font-family: ;
+    
 
 }
 
@@ -34,11 +38,25 @@ h1 {
 div {
     font-size: 1.5em; /* (24px) */
     font-weight: 600;
-    font-style: italic; 
+    font-style: italic;
+    
 }
 
 article {
     font-size: 2.25rem; /* (36px) */
     font-style: initial;
     font-family: Story Script, sans-serif;
+
+}
+
+.p1 {
+    border: 2px solid red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.p2 {
+    border: 2px solid red;
+    white-space: pre;
 }
