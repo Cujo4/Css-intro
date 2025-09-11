@@ -1,0 +1,99 @@
+    * {
+        box-sizing:border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    html {
+        --user-photo-width: 150px;
+    }
+
+    body {
+        font-family: sans-serif;
+        line-height: 1.2;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .usercard {
+        text-align: center;
+        width: 100%;
+        min-width: 250px;
+        max-width: 300px;
+        overflow: hidden;
+        border-radius: 30px;
+        margin: 50px auto;
+        box-shadow: 0px 0px 10px grey;
+    }
+    
+    .bg {
+    background-image: url(./images/pexels-solyartphotos-33427160.jpg);
+    height: 150px;
+    text-align: right;
+    padding: 25px;
+    color: white;
+    }
+        
+    .content-wrapper {
+        padding: 0 1em 1em;
+    }
+    
+
+    .userimg {
+        display: inline-block;
+        width: var(--user-photo-width);
+        height: var(--user-photo-width);
+        object-fit: cover;
+        border-radius: 50%;
+        object-position: top 50% left 50%;
+        margin-top: calc((-1) * var(--user-photo-width) / 2);
+        border: 3px white solid;
+        
+    }
+
+    .username {
+        font-size: 1.5rem;
+        margin: 0.4em 0;
+    }
+
+    .usergeoposition {
+        font-size: 1rem;
+        margin: 0.5em 0;
+    }
+
+    .job {
+        font-size: 1.2rem;
+        margin: 0.4em 0;
+    }
+
+    .experience {
+        font-size: 1rem;
+        margin: 1.2em 0;
+
+    }
+
+    footer {
+        
+    }
+
+    .user-social-link {
+        color: white;
+        background-color: grey;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        padding: 15px 20px;
+        width: 45px;
+        height: 45px;
+        margin: 0px 15px;
+    }
+
+    
+
+     
+
+
+
+    
