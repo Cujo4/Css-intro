@@ -1,5 +1,5 @@
     * {
-        box-sizing:border-box;
+        box-sizing: border-box;
         margin: 0px;
         padding: 0px;
     }
@@ -75,18 +75,21 @@
 
     }
 
-    
-
-    .user-social-link {
-        color: white;
+    .usersociallink {
+        display: inline-block;
+        display: inline-block;
         background-color: grey;
+        color: white;
+        font-size: 2rem;
         border-radius: 50%;
-        font-size: 1.5rem;
-        padding: 15px 20px;
-        width: 45px;
-        height: 45px;
+        padding-top: 10px;
+        width: 70px;
+        height: 50px;
         margin: 0px 15px;
+                
     }
+
+   
 
     
 
