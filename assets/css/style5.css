@@ -77,16 +77,19 @@
 
     .usersociallink {
         display: inline-block;
-        display: inline-block;
         background-color: grey;
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border-radius: 50%;
-        padding-top: 10px;
-        width: 70px;
-        height: 50px;
+        padding: 10px;
+        width: 45px;
+        height: 45px;
         margin: 0px 15px;
                 
+    }
+
+    .usersociallink + .usersociallink {
+        margin-left: 5px;
     }
 
    
