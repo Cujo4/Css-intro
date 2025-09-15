@@ -1,3 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+}
+
+.outerBlock {
+    border: 5px solid blue;
+}
+
+.innerBlock {
+    border: 5px solid red;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.flexParent {
+    height: 300px;
+    display: flex;
+    flex-direction: row; /* row - ряд(→) | column - столбец(↓) | row-reverse(←); column-reverse(↑) - в обратную сторону */
+    justify-content: space-around; /* основная ось */
+    align-items: stretch; /* вторая ось */
+    gap: 0px; /* расстояние только между элемеентами */
+    flex-wrap: nowrap; /* управление переносом элементов */
+    /* flex-flow: row wrap; flex-direction + flex-wrap */
+}
+
+.flexChild {
+
+}
+
+.child4 {
+    /* margin-left: auto; */
+}
