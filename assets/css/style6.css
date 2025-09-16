@@ -1,36 +1,27 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
+
 }
 
 html {
     font-size: 16px;
 }
 
-.outerBlock {
-    border: 5px solid blue;
+a {
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #8a3200;
+    padding: 10px 20px;
 }
 
-.innerBlock {
-    border: 5px solid red;
-    padding: 10px;
-    font-size: 2rem;
-}
-
-.flexParent {
-    height: 300px;
+header {
+    background-color: aquamarine;
+    height: 100vh;
+    padding: 20px;
+    
     display: flex;
-    flex-direction: row; /* row - ряд(→) | column - столбец(↓) | row-reverse(←); column-reverse(↑) - в обратную сторону */
-    justify-content: space-around; /* основная ось */
-    align-items: stretch; /* вторая ось */
-    gap: 0px; /* расстояние только между элемеентами */
-    flex-wrap: nowrap; /* управление переносом элементов */
-    /* flex-flow: row wrap; flex-direction + flex-wrap */
-}
-
-.flexChild {
-
-}
-
-.child4 {
-    /* margin-left: auto; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
