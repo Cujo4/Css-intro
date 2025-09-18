@@ -1,4 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Bitcount", sans-serif;
 }
+
+.parent {
+    border: 5px blue solid;
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* "align-self" - расположение элемента по перпендикулярной оси;
+    "order" - переставляет элемент на другое место;
+    */
+
+.child {
+    border: 5px red solid;
+    width: 200px;
+    /* flex */
+    flex-grow: 0; /*разрешение увеличиваться (0 - нельзя, 1 - можно) */
+    flex-shrink: 1; /* разрешение уменьшаться (0 - нельзя, 1 - можно) */
+    
+}
+
+.enother-el {
+    border: 5px red solid;
+    width: 200px;
+}
+
+.child1 {
+    order: 1; 
+}
+
+.child2 {
+    order: 3;
+}
+
+.child3 {
+    order: 2;
+}
+
+.child4 {
+    order: 4;
+}
+
+
+.child5 {
+    order: 5;
+}
+
+.child6 {
+    order: 6;
+}
+
+
 
