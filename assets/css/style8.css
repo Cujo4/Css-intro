@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 15px;
+}
+
+.article {
+    width: 100%;
+    min-width: 300px;
+    max-width: 900px;
+    box-shadow: 0 0 5px grey;
+    margin: 0 auto;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
+}
+
+.articleDescription {
+    flex-basis: 350px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.imageWrapper {
+    flex-basis: 350px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    
+}
