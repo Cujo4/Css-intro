@@ -1,40 +1,84 @@
 * {
-    box-sizing: border-box;
+   box-sizing: border-box;
+   
 }
 
 body {
-    padding: 15px;
+    text-align: center;
 }
 
-.article {
-    width: 100%;
-    min-width: 300px;
-    max-width: 900px;
-    box-shadow: 0 0 5px grey;
-    margin: 0 auto;
-    padding: 15px;
+.userCard {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
 
+    box-shadow: 0 0 15px grey;
+    margin: 50px 0;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.userImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0px 0px;
+    margin-top: 15px;
+}
+
+.checkMark {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
-    gap: 15px;
+    justify-content: center;
+    margin: -25px 0 0 60px;
+    
 }
 
-.articleDescription {
-    flex-basis: 350px;
-    flex-shrink: 1;
-    flex-grow: 1;
+.checkMarkElement {
+    background-color: green;
+    border-radius: 50%;
+    padding-top: 2px;
+    height: 1.5vw;
+    width: 1.5vw;
+    
+    
 }
 
-.imageWrapper {
-    flex-basis: 350px;
-    flex-shrink: 1;
-    flex-grow: 1;
+.ii2 {
+    align-self: flex-end;
+    margin: -90px 5px 0 0;
 }
 
-.imageWrapper img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.userDiscription {
+    
+}
+
+.memberSection {
+    
+}
+
+.userIndicators {
+
+}
+
+.userInformation {
+
+}
+
+.cardFooter {
+
+}
+
+.socialLinks {
+
+}
+
+.socialLinkItem {
+
+}
+
+.editBtn {
     
 }
