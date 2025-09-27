@@ -3,8 +3,17 @@
    
 }
 
+html {
+    background-color:antiquewhite;
+}
+
 body {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
 }
 
 .userCard {
@@ -17,8 +26,13 @@ body {
     box-shadow: 0 0 15px grey;
     margin: 50px 0px 0px 50px;
     min-width: 200px;
-    max-width: 350px;
+    max-width: 400px;
+    width: 500px;
+    min-height: 100px;
     font-size: 1rem;
+    flex-wrap: wrap;
+    background-color: rgb(239, 230, 230);
+
 }
 
 .userImage {
@@ -27,7 +41,38 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: 0px 0px;
-    margin-top: -20px; 
+    margin-top: -20px;
+    box-shadow: 0 0 0 5px rgb(182, 183, 238);
+}
+
+.userImage1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0px -5px;
+    margin-top: -20px;
+    box-shadow: 0 0 0 5px rgb(182, 183, 238);
+}
+
+.userImage2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0px 0px;
+    margin-top: -20px;
+    box-shadow: 0 0 0 5px rgb(182, 183, 238);
+}
+
+.userImage3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0px 0px;
+    margin-top: -20px;
+    box-shadow: 0 0 0 5px rgb(182, 183, 238);
 }
 
 .checkMark {
@@ -55,6 +100,7 @@ body {
 .ii2, .iii2 {
     align-self: flex-end;
     margin: 10px 5px 0 0;
+    cursor: pointer;
      
 }
 
@@ -84,12 +130,14 @@ body {
     align-items: center;
     gap: 50px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .userIndicators {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    
 }
 
 .p1UI {
@@ -122,6 +170,7 @@ body {
     align-items: center;
     margin: -15px 0px 20px 0px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .socialLinkItem1 {
