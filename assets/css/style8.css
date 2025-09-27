@@ -10,13 +10,15 @@ body {
 .userCard {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    
+    gap: 10px;
     
 
     box-shadow: 0 0 15px grey;
-    margin: 50px 0;
+    margin: 50px 0px 0px 50px;
     min-width: 200px;
-    max-width: 250px;
+    max-width: 350px;
+    font-size: 1rem;
 }
 
 .userImage {
@@ -25,60 +27,173 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: 0px 0px;
-    margin-top: 15px;
+    margin-top: -20px; 
 }
 
 .checkMark {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: -25px 0 0 60px;
-    
+    margin: -31px 0 0 55px;
 }
 
 .checkMarkElement {
-    background-color: green;
+    padding-top: 20px;
+    height: 15px;
+    width: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
     border-radius: 50%;
-    padding-top: 2px;
-    height: 1.5vw;
-    width: 1.5vw;
-    
-    
+    background: green;
+    font-size: 10px;
+    box-shadow: 0 0 5px green;
+    color: white;
 }
 
-.ii2 {
+.ii2, .iii2 {
     align-self: flex-end;
-    margin: -90px 5px 0 0;
+    margin: 10px 5px 0 0;
+     
 }
+
 
 .userDiscription {
-    
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.name {
+    font-size: 1.3em;
+}
+
+.pJob {
+    color: grey;
+    font-size: 0.8em;
+    font-weight: 100;
 }
 
 .memberSection {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
 }
 
 .userIndicators {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
 
+.p1UI {
+    color: grey;
+    font-size: 0.8em;
+    font-weight: 100;
 }
 
 .userInformation {
-
+    text-align: center;
+    color: grey;
+    font-size: 1em;
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
 }
 
 .cardFooter {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .socialLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: -15px 0px 20px 0px;
+    gap: 20px;
+}
+
+.socialLinkItem1 {
+    border-radius: 50%;
+    background-color: rgb(8, 168, 237);
+    color: white;
+    height: 35px;
+    width: 35px;
+    padding: 10px 0px 0px 1px;
+    font-size: 16px;
+    cursor: pointer;
 
 }
 
-.socialLinkItem {
+.socialLinkItem2 {
+    border-radius: 50%;
+    background-color: rgb(2, 2, 120);
+    color: white;
+    height: 35px;
+    width: 35px;
+    padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.socialLinkItem3 {
+    border-radius: 50%;
+    background-color: rgb(219, 150, 21);
+    color: white;
+    height: 35px;
+    width: 35px;
+    padding: 10px 0px 0px 1px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.socialLinkItem4 {
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    height: 35px;
+    width: 35px;
+    padding: 8px 0px 0px 1px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
 
 .editBtn {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    min-width: 180px;
+    max-height: 80px;
+    min-height: 50px;
+    border-radius: 25px;
+    background-color: rgb(21, 212, 187);
+    padding: 5px;
+    margin: 5px auto 25px auto;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    color: grey;
+    background-color: white;
+    border: 2px solid grey;
 }
