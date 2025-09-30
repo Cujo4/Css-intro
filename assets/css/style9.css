@@ -1,0 +1,81 @@
+/* element:link - вид элемента до того как по нему перешли.
+   element:visited - вид элемента после того как по нему перешли
+   element:hover - вид элемента при наведении на него
+   element:active - вид элемента во время нажатия на него
+   element:focus  - вид элемента когда на него поставлен курсор для ввода
+   
+   element :first-child - значения применяются к первому доч.элементу элемента "element"
+   element :last-child - значения применяются к последнему доч.элементу элемента "element"
+   element :first-of-type - значения применяются к каждому новому первому доч.элементу элемента "element"
+   element :last-of-type - значения применяются к каждому новому последнему доч.элементу элемента "element"
+   element :nth-child(число/фомула"2n" "2n+1") - значения применяются к выбраным доч.элементам элемента "element"
+   */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.table1 {
+    border: 2px solid black;
+    border-collapse: collapse; /* Схлопывание границ ячеек */
+}
+
+.tr1 {
+
+}
+
+.td1 {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.th1 {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.table2 {
+    border: 2px solid red;
+    border-spacing: 0px; /* Расстояние между ячейками */
+}
+
+.tr2 {
+    
+}
+
+.td2 {
+    border: 2px solid red;
+    padding: 5px;
+}
+
+
+.table3 {
+    border: 2px solid green;
+}
+
+.tr3 {
+    
+}
+
+.td3 {
+    border: 2px solid green;
+    padding: 5px;                                 
+}
+
+
+
+
+
+
+
+
+
+
+
