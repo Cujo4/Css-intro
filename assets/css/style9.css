@@ -15,88 +15,119 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+
 }
 
-body {
+/* body {
+    text-align: center;
+    margin-top: 200px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    font-size: 30px;
-    
-}
-
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    padding: 100px;
-}
-
-th {
-    color: white;
-    padding: 10px;
-    
-   
-}
-
-td {
-    padding: 10px;
-}
-
-
-.tr1 :nth-child(1) {
-    background-color: rgb(153, 153, 235);
-}
-
-.tr1 :nth-child(2) {
-    background-color: rgb(99, 99, 238);
-}
-
-.tr1 :nth-child(3) {
-    background-color: rgb(54, 54, 223);
-}
-
-.tr1 :nth-child(4) {
-    background-color: rgb(20, 20, 195);
-}
-
-button {
-    padding: 15px;
-    min-width: 150px;
-    font-size: 32px;
-}
-
-
-/* .tr2 :nth-child(2n+1) {
-    background-color: grey;
-}
-
-.tr2 :nth-child(2n) {
-    background-color: rgb(204, 201, 201);
-}
-
-
-.tr3 :nth-child(2n+1) {
-    background-color: rgb(204, 201, 201);
-}
-
-.tr3 :nth-child(2n) {
-    background-color: rgb(255, 255, 255);
 } */
 
-tr:nth-child(2n+1) > td:nth-child(2n+1) {
-    background-color: grey;
+
+
+
+
+/*
+
+1) position: static; - Не двигается.
+2) position: relative; - Двигается относительно своей прошлой позиции (За ним фиксируется место).
+3) position: absolute; - Двигаетяс относительно ближайшего родителя у которого задан "Position: Relative" (За ним не фиксируется место).
+4) position: fixed; - Двигается относительно вью-порта (За ним место не фиксируется).
+5) position: sticky;
+
+*/
+
+
+
+
+.parent {
+    border: 5px solid green;
+    position: relative;
+       
 }
 
-tr:nth-child(2n) > td:nth-child(2n+1), tr:nth-child(2n+1) > td:nth-child(2n) {
-    background-color: rgb(204, 201, 201);
+.child {
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
 }
 
-tr:nth-child(2n) > td:nth-child(2n) {
-    background-color: rgb(255, 255, 255);
+.child:nth-child(1) {
+    position: static;
+    background-color: yellow;
 }
+
+.child:nth-child(2) {
+    position: relative;
+    top: -30px;
+    left: -10px;
+    background-color: rgb(42, 186, 29);
+    z-index: 0;
+
+}
+
+.child:nth-child(3) {
+    position: relative;
+    top: 30px;
+    left: -10px;
+    background-color: rgb(207, 33, 184);
+    z-index: -1;
+
+}
+
+.child:nth-child(4) {
+    position: static;
+    background-color: rgb(40, 122, 204);
+}
+
+.child:nth-child(5) {
+    background-color: rgb(228, 107, 151);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.child:nth-child(6) {
+    background-color: rgb(226, 89, 20);
+    position: absolute;
+    top: 150px;
+    left: 650px;
+    z-index: 1;
+}
+
+.child:nth-child(7) {
+    background-color: rgb(238, 178, 235);
+    position: absolute;
+    bottom: 0;
+    left: 50px;   
+}
+
+    .child8 {
+        height: 100px;
+        width: 100px;
+        border: 5px solid black;
+        background-color: rgb(144, 155, 119);
+        position: sticky;
+        margin-left: 300px;
+        top: 10px;  
+    }
+
+body {
+    text-align: center;
+}
+
+.p1 {
+    background-color: aquamarine;
+    
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+
 
 
 
