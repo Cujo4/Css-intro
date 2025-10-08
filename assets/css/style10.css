@@ -1,0 +1,89 @@
+/* Псевдоэлементы */
+
+/* body {
+    background-color: bisque;
+}
+
+p::first-letter {
+    color: red;
+}
+
+p::first-line {
+    font-style: italic;
+}
+
+h1::selection {
+    background-color: green;
+}
+
+p::selection {
+    background-color: blue;
+}
+
+p::before {
+    content: '<<'
+}
+
+p::after {
+    content: '>>'
+}
+
+::marker {
+    color: orange;
+} */
+
+* {
+  box-sizing: border-box;  
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.order {
+    overflow: hidden;
+    width: 100%;
+    min-width: 300px;
+    max-width: 350px;
+    padding: 25px;
+    background-image: linear-gradient(to right, rgb(155, 155, 240), rgb(65, 65, 244));
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-count {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.order::before {
+    content: '';
+    background-color: rgba(173, 173, 239, 0.4);
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    bottom: -90px;
+    right: -20px;
+}
+
+.order::after {
+    content: '';
+    background-color: rgba(173, 173, 239, 0.4);
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-radius: 50%;
+    right: -90px;
+    top: -20px;
+}
