@@ -1,0 +1,85 @@
+* {
+   box-sizing: border-box; 
+}
+
+body {
+    
+}
+
+p {
+    border: 2px solid red;
+    background-color: green;
+    transition: box-shadow 1s ease 2s;
+}
+
+p:hover {
+    box-shadow: 0 0 20px orange;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.5s ease 0.5s;
+}
+
+header:hover h1 {
+    filter: blur(5px);
+}
+
+header:hover .div1 {
+    filter: blur(0);
+}
+
+.div1 {
+    background-image: url(https://i.pinimg.com/736x/4c/6f/2a/4c6f2a04633d50c37578f7872978c71d.jpg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+    transition: filter 0.5s ease 0.5s;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s 1s;
+}
+
+button:hover {
+    transform: scale(2);
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    
+    transition: transform 1s 0.5s;
+    
+}
+
+h2:hover {
+    transform: rotate(360deg) translate(-300px, 0);
+}
