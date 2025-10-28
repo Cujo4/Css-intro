@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: clamp(12px, 5vw, 20px);
+}
+
+p {
+    background-color: green;
+}
+
+/* @media какое_устройство and (условие на размер вьюпорта) {...} */
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+    p {
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    p {
+        padding: 20px;
+    }
+}
+
+p.p1 {
+    color: orange;
+}
+
+div.p1 {
+    color: red;
+}
+
