@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gclamp {
+    border: 2px solid blueviolet;
+    width: clamp(0.5fr, 1fr, 1.5fr);
+}
+
+.outer-conteiner {
+    border: 2px solid green;
+}
+
+.inner-block {
+    border: 2px solid red;
+}
+
+.grid-parent {
+    /*grid-template-columns: 25% 1fr minmax(200px, 600px);
+    grid-template-columns: repeat(6, 200px) 
+    grid-template-rows: 50px 100px;
+    (auto-fill, 100px) - адаптируются и принимают размер
+    (auto-fit, minmax(...)) - адаптируются и заполняют свободное место
+
+    неявная сетка:
+    grid-auto-flow - определяет куда будут переносится строки
+    grid-auto-rows: 
+    grid-auto-columns: */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 200px);
+}
+
+.div-child {
+}
