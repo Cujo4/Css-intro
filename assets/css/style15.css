@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.a1-header {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 10px 30px;
+}
+
+.a-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.a-header a {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 10px 30px;
+}
+
+.a-header a:hover,
+.a1-header:hover {
+    background-color: grey;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic1 {
+    background-image: url(https://i.pinimg.com/736x/47/5c/b5/475cb5f9ebc45a849d9db21a4ca20a14.jpg);
+    width: 98vw;
+    height: 100vh;
+    min-height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.p-in-pic1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+    color: rgba(45, 6, 143, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.p-in-pic1 :first-child {
+    background-color: rgb(0, 0, 0, 0.6);
+    color: inherit;
+    padding: 10px 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 100%;
+}
+
+.projects h2 {
+    padding: 100px 0 50px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 10px;
+}
+
+.cards :nth-child(1n) img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.cards > div {
+    position: relative;
+}
+
+.cards :nth-child(1n) p {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+
+.about {
+}
+
+.contact {
+}
