@@ -15,6 +15,7 @@ body {
 
 .outer-conteiner {
     border: 2px solid green;
+    min-height: 640px;
 }
 
 .inner-block {
@@ -22,20 +23,158 @@ body {
 }
 
 .grid-parent {
-    /*grid-template-columns: 25% 1fr minmax(200px, 600px);
+    /* grid-template-columns: 25% 1fr minmax(200px, 600px);
     grid-template-columns: repeat(6, 200px) 
     grid-template-rows: 50px 100px;
     (auto-fill, 100px) - адаптируются и принимают размер
     (auto-fit, minmax(...)) - адаптируются и заполняют свободное место
 
     неявная сетка:
-    grid-auto-flow - определяет куда будут переносится строки
+    grid-auto-flow: row/column - определяет куда будут переносится строки
     grid-auto-rows: 
-    grid-auto-columns: */
+    grid-auto-columns:*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px 10px;
+    justify-items: start;
+    align-items: end;
 }
 
-.div-child {
+.grid-child:nth-child(1) {
+    order: 6;
+    justify-self: stretch;
+    align-self: start;
+}
+
+.grid-child:nth-child(2) {
+    order: 4;
+    justify-self: stretch;
+    align-self: center;
+}
+
+.grid-child:nth-child(3) {
+    order: 3;
+    justify-self: start;
+    align-self: start;
+}
+
+.grid-child:nth-child(4) {
+    order: 2;
+    justify-self: left;
+    align-self: end;
+}
+
+.grid-child:nth-child(5) {
+    order: 5;
+    justify-self: center;
+    align-self: end;
+}
+
+.grid-child:nth-child(6) {
+    order: 1;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+.grid-child {
+}
+
+/* .grid-child:nth-child(1) {
+    grid-column: 1 / 3;
+}
+
+.grid-child:nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+} */
+
+/* .parent {
+    display: grid;
+    min-height: 100vh;
+
+    grid-template-columns: 1fr minmax(200px, 300px) minmax(400px, 600px) 1fr;
+    grid-template-rows: 200px 1fr 150px;
+}
+
+.child {
+    border: 3px solid orange;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.main {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 5;
+} */
+
+.parent {
+    height: 100vh;
+    display: grid;
+    border: 5px solid orange;
+    grid-template-columns: 1fr 10% 30% 1fr;
+    grid-template-rows: 20% 1fr 20%;
+
+    grid-template-areas:
+        "o-header o-header o-header o-header"
+        ". o-nav o-main ."
+        "o-footer o-footer o-footer o-footer";
+}
+
+.child {
+    border: 3px solid green;
+}
+
+.header {
+    grid-area: o-header;
+}
+
+.nav {
+    grid-area: o-nav;
+}
+
+.main {
+    grid-area: o-main;
+}
+
+.footer {
+    grid-area: o-footer;
+}
+
+@media screen and (max-width: 650px) {
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 15% auto 30%;
+
+        grid-template-areas:
+            "o-header"
+            "o-nav"
+            "o-main"
+            "o-footer";
+    }
+}
+
+h2[for^="He"] {
+    border: 2px solid red;
+}
+
+h2[for*="ed"] {
+    border: 2px solid yellow;
+}
+
+h2[for$="4"] {
+    background-color: blueviolet;
 }
