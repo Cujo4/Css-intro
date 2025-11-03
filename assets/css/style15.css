@@ -6,7 +6,8 @@
 
 body {
     font-family: Verdana, sans-serif;
-    padding: 10px 20px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 a {
@@ -15,11 +16,17 @@ a {
 }
 
 header {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 1.2rem;
+    width: 100vw;
+    box-shadow: 0 0 5px grey;
 }
 
 .a1-header {
@@ -52,18 +59,33 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
+    gap: 80px;
+
+    margin: 0 30px;
 }
 
 .pic1 {
-    background-image: url(https://i.pinimg.com/736x/47/5c/b5/475cb5f9ebc45a849d9db21a4ca20a14.jpg);
+    background-image: url(https://i.pinimg.com/736x/ce/08/b2/ce08b2b412b435cae60b771fce93d5d1.jpg);
     width: 98vw;
     height: 100vh;
-    min-height: 900px;
+    min-height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    grid-template-columns: repeat(1, minmax(100px, 200px));
+}
+
+@media screen and (max-width: 400px) {
+    .pic1 {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+        grid-auto-rows: auto;
+    }
 }
 
 .p-in-pic1 {
@@ -72,7 +94,7 @@ main {
     align-items: center;
     gap: 10px;
     font-size: 2rem;
-    color: rgba(45, 6, 143, 0.6);
+    color: rgba(171, 242, 95, 0.6);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -88,20 +110,33 @@ main {
 .projects {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 
     width: 100%;
 }
 
-.projects h2 {
-    padding: 100px 0 50px 0;
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(233, 230, 230);
+    width: 98%;
+    margin: 20px 0;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 200px);
+    /*   grid-template-columns: repeat(4, minmax(300px, 400px));*/
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
     gap: 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+        grid-auto-rows: auto;
+    }
 }
 
 .cards :nth-child(1n) img {
@@ -124,7 +159,143 @@ main {
 }
 
 .about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.present {
+    display: grid;
+    /*
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+}
+
+.specialist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.specialist p:first-of-type {
+    font-weight: 100;
+    color: rgb(124, 119, 119);
+}
+
+.specialist button:first-of-type {
+    border: none;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+
+.specialist button:first-of-type:hover {
+    background-color: rgb(197, 191, 191);
+}
+
+/* .specialist > img:nth-child(1) {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    object-position: 0% 0%;
+}
+
+.specialist > img:nth-child(2) {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    object-position: 0% 0%;
+} */
+
+.specialist img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    object-position: 50% 50%;
+}
+
+.specialist > img:nth-child(3) {
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 400px; */
+    /*object-position: 0% 0%; -5%; */
+}
+
+.specialist > img:nth-child(4) {
+    /* object-fit: cover; */
+    /* width: 100%; */
+    /* height: 400px; */
+    /*object-position: 0% 0%; -5%; */
 }
 
 .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+}
+
+@media screen and (max-width: 210px) {
+    .form {
+        grid-template-columns: repeat(1, 100px);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+input {
+    min-height: 6vh;
+    padding: 10px;
+}
+
+.form > button {
+    background-color: black;
+    color: white;
+    border: none;
+    max-width: 200px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form > button:hover {
+    background-color: rgb(165, 160, 160);
+    color: black;
+}
+
+.pic2 {
+    background-image: url(https://i.pinimg.com/736x/a5/80/fb/a580fbe236b8a39e39353b9332618132.jpg);
+    height: 100vh;
+    width: 98vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background-color: black;
+    margin-top: 10px;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: green;
+    text-decoration: underline;
 }
