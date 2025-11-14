@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid green;
+    max-width: 25%;
+    position: absolute;
+    z-index: -1;
+    top: 15vh;
+    padding: 20px;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+    /* object-position: 0 0; */
+
+    width: 80px;
+    height: 80px;
+}
+
+.namingCard {
+    display: flex;
+    gap: 10px;
+}
+
+.nameCard,
+.surnameCard {
+    font-weight: 900;
+}
+
+.ageCard {
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+}
