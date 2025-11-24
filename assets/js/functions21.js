@@ -79,17 +79,53 @@
 // const age2 = pov(age1);
 // console.log(age2);
 
-function pov(age) {
-    // const pov1 = age >= 18;
-    // return pov1;
-    // return age >= 18;
-    return age >= 18 ? "Совершеннолетний" : "Несовершеннолетний";
-}
-const age1 = Number(prompt("Возраст введите"));
-const age2 = pov(age1);
-alert(age2);
-// if (pov(age1)) {
-//     alert("Совершеннолетний");
-// } else {
-//     alert("Несовершеннолетний");
+// function pov(age) {
+//     // const pov1 = age >= 18;
+//     // return pov1;
+//     // return age >= 18;
+//     return age >= 18 ? "Совершеннолетний" : "Несовершеннолетний";
 // }
+// const age1 = Number(prompt("Возраст введите"));
+// const age2 = pov(age1);
+// alert(age2);
+// // if (pov(age1)) {
+// //     alert("Совершеннолетний");
+// // } else {
+// //     alert("Несовершеннолетний");
+// // }
+
+// const baran = function (a, b) {
+//     return a ** b;
+// };
+
+// const c = Number(prompt("Введиет число 1"));
+// const d = Number(prompt("Введиет число 2"));
+// alert(baran(c, d));
+
+// function sum(a, b = 1) {
+//     return a + b;
+// }
+
+// console.log(sum(8, 7));
+// console.log(sum(10));
+
+/**
+ *
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
+function sum(a = 2, b) {
+    if (a === undefined || a === "") {
+        a = 2;
+    }
+    let sum1 = 0;
+    for (let i = a; i <= b; i += 1) {
+        sum1 += i;
+    }
+    return sum1;
+}
+
+let c = Number(prompt("Число 1"));
+let d = Number(prompt("Число 2"));
+alert(sum(c, d));
