@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    text-align: center;
+}
+
+.div {
+    box-shadow: 0 0 10px grey;
+    padding: 20px;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.img {
+    object-fit: cover;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* #price {
+    text-decoration: line-through;
+    color: gray;
+} */

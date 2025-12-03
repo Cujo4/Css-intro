@@ -109,23 +109,81 @@
 // console.log(sum(8, 7));
 // console.log(sum(10));
 
+// /**
+//  *
+//  * @param {number} a
+//  * @param {number} b
+//  * @returns {number}
+//  */
+// function sum(a = 2, b) {
+//     if (a === undefined || a === "") {
+//         a = 2;
+//     }
+//     let sum1 = 0;
+//     for (lяet i = a; i <= b; i += 1) {
+//         sum1 += i;
+//     }
+//     return sum1;
+// }
+
+// let c = Number(prompt("Число 1"));
+// let d = Number(prompt("Число 2"));
+// alert(sum(c, d));
+
+// function sum(a, b) {
+//     return a ** b;
+// }
+
+// const c = Number(5);
+// const d = Number(2);
+// const summ = sum(c, d);
+// console.log(summ);
+
+// function sum(a, b) {
+//     let prib = 0;
+//     for (i = a; i <= b; i += 1) {
+//         prib += i;
+//     }
+//     console.log(`Сумма чисел от ${a} до ${b} = ${prib}`);
+//     return prib;
+// }
+
+// const c = Number(prompt("Первое число"));
+// const d = Number(prompt("Второе число"));
+// const summ = sum(c, d);
+
+// function isAdult(a) {
+//     return a >= 18;
+// }
+
+// const b = Number(17);
+// console.log(isAdult(b));
+
+// const sum = function (a, b = 1) {
+//     console.log(`${a} + ${b} = ${a + b}`);
+//     return a + b;
+// };
+
+// const c = Number(5);
+
+// const sum1 = sum(c);
+
 /**
  *
- * @param {number} a
- * @param {number} b
- * @returns {number}
+ * @param {number} b -second
+ * @param {string} a - first
+ * @returns
  */
-function sum(a = 2, b) {
-    if (a === undefined || a === "") {
-        a = 2;
-    }
-    let sum1 = 0;
-    for (let i = a; i <= b; i += 1) {
-        sum1 += i;
-    }
-    return sum1;
-}
 
-let c = Number(prompt("Число 1"));
-let d = Number(prompt("Число 2"));
-alert(sum(c, d));
+const sum = function (b, a = 2) {
+    let plus = 0;
+    for (i = a; i <= b; i += 1) {
+        plus += i;
+    }
+    console.log(`Сумма чисел от ${a} до ${b} = ${plus}`);
+    return plus;
+};
+
+let c = Number(3);
+let d = Number(9);
+const sum1 = sum(d);
