@@ -133,3 +133,73 @@
 // const f = Number(prompt("Введите размер 3 стороны треугольника"));
 // const trian = triangle(d, e, f);
 // console.log(trian);
+// const priceStyle = `${
+//     price1 === discount1 ? "" : "text-decoration: line-through;"
+// }`;
+// const newPriceBlock =
+//     price1 === discount1
+//         ? ""
+//         : `<p id="discount">${d33}</p>
+//     <p id="percent">${discount1}</p>`;
+
+// document.writeln(`
+//   <div id="div" class="div">
+//     <img src=${img1} alt="Photo" id="img" class="img" />
+//     <p id="name"> ${name1}</p>
+//     <p id="description"> ${description1}</p>
+//     <p id="price"
+//        style="${priceStyle}">
+//       ${d1}
+//     </p>
+//     ${newPriceBlock}
+//   </div>
+// `);
+
+const img1 = prompt("Укажите ссылку на фото вашего товара");
+const name1 = prompt("Укажите название вашего товара");
+const description1 = prompt("Опишите ваш товар");
+const price1 = Number(prompt("Укажите цену вашего товара БЕЗ скидки"));
+const discount1 = Number(
+    prompt(
+        "Укажите цену вашего товара со скидкой (Если скидки нет, то укажите актуальную цену)"
+    )
+);
+const discount2 = `Новая цена: ${discount1} грн`;
+
+const percent1 = ((price1 - discount1) * 100) / price1;
+const percent2 = ((discount1 - price1) / price1) * 100;
+function percent3(a, b) {
+    if (a > b) return `Цена уменьшилась на ${percent1.toFixed(0)}%`;
+    else if (a < b) return `Цена увеличилась на ${percent2.toFixed(0)}%`;
+    else return `Цена не изменилась`;
+}
+
+const percent4 = percent3(price1, discount1);
+const price5 = price1;
+
+document.writeln(`
+   <div id="div" class="div">
+     <img src= alt="Photo" id="img" class="img" />
+     <p id="name"> </p>
+     <p id="description"> </p>
+     <p id="price">
+      ${
+          //      price1 === discount1
+          //          ? `<p>${price1}`
+          //          : `</p>
+          //          <p><span style="text-decoration: line-through;">${price1}</span></p>
+          //          <p>${discount1} </p>
+          //          <p>${percent4}</p>`
+          //  }
+          //
+
+          price1 === discount1
+              ? `<p>${price1}</p>`
+              : `<p class='allo'>${price5}</p>
+                 <p>${discount1}</p>
+                 <p>${percent4}</p>`
+      }
+
+     
+   </div>
+ `);
