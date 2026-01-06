@@ -207,70 +207,177 @@
 
 // Практика
 
-function Phone(id, brand, model, makeYear, color, isNfc, price) {
-    this.id = id;
-    this.brand = brand;
-    this.model = model;
-    this.makeYear = makeYear;
-    this.color = color;
-    this.isNfc = isNfc;
-    this.price = price;
+// function Phone(id, brand, model, makeYear, color, isNfc, price) {
+//     this.id = id;
+//     this.brand = brand;
+//     this.model = model;
+//     this.makeYear = makeYear;
+//     this.color = color;
+//     this.isNfc = isNfc;
+//     this.price = price;
+// }
+
+// const phone1 = new Phone(1, "Samsung", "Galaxy 1", 2020, "blue", true, 10000);
+// console.log(phone1);
+
+// const phones1 = [];
+
+// let phonesKolvo = 100;
+
+// for (let i = 0; i < phonesKolvo; i++) {
+//     const phones2 = new Phone(
+//         i,
+//         Math.random() > 0.5 ? "Samsung" : "Iphone",
+//         `Series ${Math.trunc(Math.random() * 20)}`,
+//         2015 + Math.trunc(Math.random() * 8),
+//         Math.random() > 0.5 ? "white" : "black",
+//         Math.random() > 0.5,
+//         5000 + Math.trunc(Math.random() * 7000)
+//     );
+
+//     phones1.push(phones2);
+// }
+
+// console.log(phones1);
+// // console.table(phones1); - Отображается в консоли в виде таблицы
+
+// function over8000(item, index, array) {
+//     return item.price >= 8000;
+// }
+
+// const phones8000 = phones1.filter(over8000);
+// console.table(phones8000);
+
+// const year2018 = phones1.filter((item) => item.makeYear === 2018);
+// console.table(year2018);
+
+// const brand1 = phones1.forEach((item) =>
+//     console.table(`${item.brand}: ${item.model}, ${item.makeYear} year`)
+// );
+
+// const foundIndex = phones1.findIndex((p) => p.id === 10);
+
+// if (foundIndex !== -1) {
+//     phones1.splice(foundIndex, 1);
+// }
+
+// console.log(phones1);
+
+// const salesPhones = phones1.map((p) => {
+//     const p1 = { ...p };
+//     p1.price = Math.round(p1.price * 0.95);
+//     return p1;
+// });
+
+// console.table(salesPhones);
+
+// phones1
+//     .filter((p) => p.isNfc)
+//     .forEach((p) => console.log(`${p.brand}: ${p.model} ${p.makeYear}`));
+
+///////////////////////////////////////////////////////
+
+// const qwerty1 = "qwerty";
+// console.log(qwerty1.length);
+
+// const a = new Number();
+// console.log(a);
+
+// const b = new String("qwerty");
+// console.log(b);
+
+// console.log(b[3]);
+// console.log(b.length);
+
+// /////////////////////
+
+// // Строки НЕЛЬЗЯ изменять! (Поэтому Y не изменилась на P).
+// qwerty1[5] = "p";
+// console.log(qwerty1);
+
+// /////////////////////
+
+// const qwerty2 = qwerty1.slice(0, 5) + "m";
+// console.log(qwerty2);
+
+// // Проверяет есть ли в начале эта часть
+// let qwerty3 = qwerty1.startsWith("qw");
+// console.log(qwerty3);
+
+// // Проверяет есть ли в конце эта часть
+// qwerty3 = qwerty1.endsWith("nty");
+// console.log(qwerty3);
+
+// // Проверяет есть ли хоть где-то в слове эта часть
+// qwerty3 = qwerty1.includes("ert");
+// console.log(qwerty3);
+
+// // Преобразовует все буквы в большие
+// qwerty3 = qwerty1.toUpperCase();
+// console.log(qwerty3);
+
+// // Преобразовует все буквы в маленькие
+// qwerty3 = qwerty1.toLowerCase();
+// console.log(qwerty3);
+
+// /////////////////////////////////////////////////////
+
+// function name1(userName) {
+//     const name2 = userName.indexOf(" ");
+//     // console.log(name2);
+
+//     return userName[0] + userName.slice(name2 + 1, name2 + 2);
+// }
+// const name3 = name1("Mudrey Salaganov");
+// console.log(name3);
+
+///////////////////////////////////////////////////
+
+// const a = "global";
+
+// function f1() {
+//     const a = "local";
+//     f2();
+// }
+
+// function f2() {
+//     console.log(a);
+// }
+
+// f1();
+
+//////////------- Замыкание
+
+// const a = "global";
+
+// function f1() {
+//     const a = "local";
+
+//     const f2 = function () {
+//         console.log(a);
+//     };
+
+//     console.log(f2);
+
+//     return f2;
+// }
+
+// const F2FromF1 = f1();
+// F2FromF1();
+
+////////////////
+
+function counter() {
+    let i = 0;
+
+    return function () {
+        return ++i;
+    };
 }
+const counter1 = counter();
 
-const phone1 = new Phone(1, "Samsung", "Galaxy 1", 2020, "blue", true, 10000);
-console.log(phone1);
-
-const phones1 = [];
-
-let phonesKolvo = 100;
-
-for (let i = 0; i < phonesKolvo; i++) {
-    const phones2 = new Phone(
-        i,
-        Math.random() > 0.5 ? "Samsung" : "Iphone",
-        `Series ${Math.trunc(Math.random() * 20)}`,
-        2015 + Math.trunc(Math.random() * 8),
-        Math.random() > 0.5 ? "white" : "black",
-        Math.random() > 0.5,
-        5000 + Math.trunc(Math.random() * 7000)
-    );
-
-    phones1.push(phones2);
-}
-
-console.log(phones1);
-// console.table(phones1); - Отображается в консоли в виде таблицы
-
-function over8000(item, index, array) {
-    return item.price >= 8000;
-}
-
-const phones8000 = phones1.filter(over8000);
-console.table(phones8000);
-
-const year2018 = phones1.filter((item) => item.makeYear === 2018);
-console.table(year2018);
-
-const brand1 = phones1.forEach((item) =>
-    console.table(`${item.brand}: ${item.model}, ${item.makeYear} year`)
-);
-
-const foundIndex = phones1.findIndex((p) => p.id === 10);
-
-if (foundIndex !== -1) {
-    phones1.splice(foundIndex, 1);
-}
-
-console.log(phones1);
-
-const salesPhones = phones1.map((p) => {
-    const p1 = { ...p };
-    p1.price = Math.round(p1.price * 0.95);
-    return p1;
-});
-
-console.table(salesPhones);
-
-phones1
-    .filter((p) => p.isNfc)
-    .forEach((p) => console.log(`${p.brand}: ${p.model} ${p.makeYear}`));
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
