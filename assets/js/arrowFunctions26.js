@@ -367,17 +367,137 @@
 
 ////////////////
 
-function counter() {
-    let i = 0;
+// function counter() {
+//     let i = 0;
 
-    return function () {
-        return ++i;
-    };
+//     return function () {
+//         return ++i;
+//     };
+// }
+// const counter1 = counter();
+
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter1());
+
+//////////////////////////////////////////////////////
+
+// Рекурсия
+
+// function factorial(n) {
+//     if (n === 0) {
+//         return 1;
+//     }
+
+//     return n * factorial(n - 1);
+// }
+
+// const result = factorial(5);
+// console.log(result);
+
+/////////////
+
+// function bracketSeq(n) {
+//     if (n === 0) {
+//         return;
+//     }
+//     console.log("(");
+//     bracketSeq(n - 1);
+//     console.log(")");
+// }
+
+// const result1 = bracketSeq(4);
+
+////////////
+
+// function numbers(n) {
+//     if (n === -2) {
+//         return;
+//     }
+//     console.log(n);
+//     numbers(n - 1);
+//     console.log(n);
+// }
+
+// const result2 = numbers(4);
+
+////////////////////////////////////////////////////
+
+// function factorial(n) {
+//     if (typeof n !== "number") {
+//         throw new Error("n must be Number");
+//     }
+//     if (n === 0) {
+//         return 1;
+//     }
+//     return n * factorial(n - 1);
+// }
+// const f1 = factorial(5);
+// console.log(`Факториал числа '5' = ${f1}`);
+// try {
+//     console.log(factorial("5"));
+// } catch (e) {
+//     console.log(e);
+// }
+// console.log("after ERROR");
+
+////////////////////////////////////////////////////
+
+// 1
+
+// function test() {
+//     const f1 = Array.from(arguments);
+//     console.log(f1);
+// }
+
+// test(5, 10, 15);
+
+// // 2
+
+// const f2 = f1.forEach((e) => {
+//     e * 2;
+// });
+// console.log(f2);
+
+//////// Рекурсия
+
+// 1
+
+// const f1 = function (n) {
+//     if (n === 1) {
+//         return 1;
+//     }
+//     const sum = sum + f1(n - 1);
+//     return sum;
+// };
+
+// const f2 = f1(1, 2, 3, 4, 5);
+
+//////////////
+
+function userAge(age) {
+    if (age < 18 || age > 70) {
+        throw new RangeError(
+            "Ваш возраст не входит в возрастные ограничения: 18 - 70"
+        );
+    }
+    if (!Number.isInteger(age)) {
+        throw new Error("Возраст должен быть целым числом");
+    }
+    if (typeof age !== "number") {
+        throw TypeError("Возраст должен быть числом");
+    }
+    return `Возраст - ${age}`;
 }
-const counter1 = counter();
 
-console.log(counter1());
-console.log(counter1());
-console.log(counter1());
-console.log(counter1());
-console.log(counter1());
+const userAgeResult = userAge(33);
+console.log(userAgeResult);
+
+try {
+    const userAgeResult1 = userAge("Anton");
+    console.log(userAgeResult1);
+} catch (oshibka) {
+    console.log(oshibka);
+}
